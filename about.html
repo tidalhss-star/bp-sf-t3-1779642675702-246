@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>마포 힙플레이스 카페 정보 | 강남 셔츠룸 타겟</title>
+    <meta name="description" content="마포 힙플레이스 카페의 진짜 정보. 위치, 영업시간, 연락처 다 여기 있다. 강남 셔츠룸 타겟? 씹가능. 전화 010-6279-0862. 지금 와서 직접 확인해라.">
+    <meta name="keywords" content="강남 셔츠룸, 마포 카페, 힙플레이스, 브루탈리즘 카페, 네온 보이드, 마포 정보, 카페 정보">
+    <link rel="canonical" href="https://sf-t3-1779642675702-246.pages.dev/info">
+    <meta property="og:title" content="마포 힙플레이스 카페 정보 | 강남 셔츠룸">
+    <meta property="og:description" content="마포 힙플레이스 카페의 진짜 정보를 공개한다. 위치, 시간, 연락처. 강남 셔츠룸 타겟은 여기로 와라.">
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', 'IBM Plex Mono', monospace; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+        img, svg { max-width: 100%; display: block; }
+        a { color: #ff2a6d; text-decoration: none; }
+        a:hover { color: #05d9e8; text-decoration: underline; }
+        ul { list-style: none; }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+        h1 { font-size: clamp(2.5rem, 8vw, 5rem); color: #ff2a6d; text-transform: uppercase; }
+        h2 { font-size: clamp(1.8rem, 5vw, 3rem); color: #05d9e8; margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; color: #ffffff; }
+        p { margin-bottom: 1rem; }
+
+        /* SPACE */
+        .space-gap { gap: 1.5rem; }
+        .space-padding { padding: 2rem; }
+        .space-section-gap { margin-top: 3rem; margin-bottom: 3rem; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+        /* NAV */
+        nav { background: #111; border-bottom: 2px solid #ff2a6d; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: #05d9e8; text-transform: uppercase; }
+        nav .nav-links { display: flex; gap: 2rem; }
+        nav .nav-links a { color: #e0e0e0; font-weight: bold; text-transform: uppercase; }
+        nav .nav-links a:hover { color: #ff2a6d; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; }
+        .hamburger span { width: 30px; height: 3px; background: #05d9e8; margin: 4px 0; }
+
+        /* HERO */
+        .hero { padding: 4rem 0; text-align: center; border-bottom: 1px solid #ff2a6d; }
+        .hero p { font-size: 1.2rem; color: #aaa; }
+
+        /* SECTION */
+        .section { padding: 3rem 0; }
+        .section-title { text-align: center; margin-bottom: 2rem; }
+
+        /* CARD GRID */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: #1a1a1a; border: 1px solid #333; padding: 2rem; border-radius: 4px; transition: 0.3s; }
+        .card:hover { border-color: #ff2a6d; transform: translateY(-4px); }
+        .card h3 { margin-bottom: 1rem; }
+        .card .meta { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
+        .card p { color: #ccc; }
+
+        /* INFO LIST */
+        .info-list { max-width: 800px; margin: 0 auto; }
+        .info-item { display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #333; }
+        .info-item .label { color: #888; text-transform: uppercase; letter-spacing: 0.1em; }
+        .info-item .value { color: #fff; font-weight: bold; }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 1rem; }
+        .faq-question { background: #1a1a1a; padding: 1rem; cursor: pointer; font-weight: bold; border-left: 3px solid #ff2a6d; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { padding: 1rem; background: #111; display: none; }
+        .faq-answer.open { display: block; }
+
+        /* TEL */
+        .tel-link { font-size: 1.5rem; color: #05d9e8; font-weight: bold; }
+        .tel-link:hover { color: #ff2a6d; }
+
+        /* FOOTER */
+        footer { background: #111; padding: 2rem 0; text-align: center; border-top: 1px solid #333; margin-top: auto; }
+        footer p { color: #666; }
+
+        /* RESPONSIVE 768 */
+        @media (max-width: 768px) {
+            nav .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem; }
+            nav .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .info-item { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 유지 -->
+    <nav>
+        <div class="container">
+            <div class="logo">힙플레이스</div>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links">
+                <a href="/">홈</a>
+                <a href="/info">정보</a>
+                <a href="/menu">메뉴</a>
+                <a href="/gallery">갤러리</a>
+                <a href="/contact">연락</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 -->
+    <section class="hero">
+        <div class="container">
+            <h1>정보</h1>
+            <p>마포 힙플레이스 카페의 진짜 정보. 가짜는 걸러라.</p>
+        </div>
+    </section>
+
+    <!-- 상세 정보 섹션 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">상세 정보</h2>
+            <div class="info-list">
+                <div class="info-item">
+                    <span class="label">주소</span>
+                    <span class="value">서울 마포구 와우산로 94-12 (지하1층)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">영업시간</span>
+                    <span class="value">매일 12:00 – 02:00 (연중무휴)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">전화</span>
+                    <span class="value"><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></span>
+                </div>
+                <div class="info-item">
+                    <span class="label">주차</span>
+                    <span class="value">없음. 대중교통 타고 와라. 게을러지지 말고.</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">와이파이</span>
+                    <span class="value">SSID: NEON_VOID / 비번: brutal1sm</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">특징</span>
+                    <span class="value">브루탈리즘 인테리어, 네온 조명, 강남 셔츠룸 타겟 환영</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="section" style="background: #0f0f0f;">
+        <div class="container">
+            <h2 class="section-title">자주 묻는 헛소리</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                    <span>여기가 진짜 강남 셔츠룸 타겟 카페임?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>당연하지. 셔츠 하나만 걸치고 와도 환영한다. 분위기는 이미 씹힙. 근데 니가 셔츠룸이 뭔지 모르면 검색하고 와라.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                    <span>주차 어디에 함?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>주차? 꿈도 꾸지 마라. 마포에서 차 끌고 오는 건 범죄다. 지하철 6호선 상수역 2번 출구에서 걸어와라. 니 다리 써라.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                    <span>콘센트 있음? 노트북 가능?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>각 자리마다 콘센트 있다. 하지만 니가 인스타나 하려고 오면 꺼져라. 여기는 작업하는 사람들을 위한 공간이다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                    <span>강남에서 오려면 어떻게?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>강남 타겟이면 2호선 타고 신촌에서 내려라. 거기서 걸어와. 아니면 셔츠룸 타고 오든가. 선택은 니 몫이다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                    <span>전화 꼭 하고 와야 함?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>안 해도 된다. 근데 자리가 없을 수 있다. 010-6279-0862로 미리 전화해라. 게으르게 굴지 말고.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 추가 지역 시그널 섹션 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">왜 마포인가?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>마포 vs 강남</h3>
+                    <div class="meta">진짜 힙스터는 마포로 간다</div>
+                    <p>강남은 가짜다. 가로수길? 그딴 거 없음. 여기 마포는 브루탈리즘 건물 사이로 네온이 빛난다. 강남 셔츠룸 타겟이라면 마포에서 제대로 즐겨라.</p>
+                </div>
+                <div class="card">
+                    <h3>지역 맛집 연계</h3>
+                    <div class="meta">카페 끝나고 바로 고기</div>
+                    <p>카페 옆에 24시 정육점 있다. 고기 사와서 우리가 구워줌. 니가 가져오든 말든. 마포의 밤은 길다.</p>
+                </div>
+                <div class="card">
+                    <h3>교통 허브</h3>
+                    <div class="meta">어디든 30분</div>
+                    <p>홍대입구, 합정, 상수 역세권. 강남까지 25분. 너가 사는 동네가 어디든 여기로 모여라. 마포는 중심이다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 지도 대체 안내 -->
+    <section class="section" style="background: #0a0a0a; border-top: 1px solid #ff2a6d;">
+        <div class="container">
+            <h2 class="section-title">찾아오는 법</h2>
+            <p style="text-align: center; font-size: 1.2rem;">지도 따위는 없다. 니 발로 찾아와라.</p>
+            <p style="text-align: center;">상수역 2번 출구에서 도보 3분. 골목 안쪽 지하. 네온 불빛 보이면 그게 우리다.</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: #888;">길치면 전화해라. 그런 놈들도 받아준다.</p>
+        </div>
+    </section>
+
+    <!-- 푸터 유지 -->
+    <footer>
+        <div class="container">
+            <p>© 힙플레이스 마포 | 강남 셔츠룸 타겟 | 전화 010-6279-
+</body>
+</html>
