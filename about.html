@@ -92,156 +92,82 @@
     </style>
 </head>
 <body>
-    <!-- 네비게이션 유지 -->
-    <nav>
-        <div class="container">
-            <div class="logo">힙플레이스</div>
-            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <span></span><span></span><span></span>
-            </div>
-            <div class="nav-links">
-                <a href="/">홈</a>
-                <a href="/info">정보</a>
-                <a href="/menu">메뉴</a>
-                <a href="/gallery">갤러리</a>
-                <a href="/contact">연락</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- 히어로 -->
-    <section class="hero">
-        <div class="container">
-            <h1>정보</h1>
-            <p>마포 힙플레이스 카페의 진짜 정보. 가짜는 걸러라.</p>
-        </div>
-    </section>
+<main class="container">
+<section class="hero">
+<h1>마포 힙플레이스 카페 정보</h1>
+<p>지역 방문 전 확인할 수 있는 기본 정보와 이용 안내를 정리했습니다.</p>
+</section>
 
-    <!-- 상세 정보 섹션 -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">상세 정보</h2>
-            <div class="info-list">
-                <div class="info-item">
-                    <span class="label">주소</span>
-                    <span class="value">서울 마포구 와우산로 94-12 (지하1층)</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">영업시간</span>
-                    <span class="value">매일 12:00 – 02:00 (연중무휴)</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">전화</span>
-                    <span class="value"><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></span>
-                </div>
-                <div class="info-item">
-                    <span class="label">주차</span>
-                    <span class="value">없음. 대중교통 타고 와라. 게을러지지 말고.</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">와이파이</span>
-                    <span class="value">SSID: NEON_VOID / 비번: brutal1sm</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">특징</span>
-                    <span class="value">브루탈리즘 인테리어, 네온 조명, 강남 셔츠룸 타겟 환영</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+<h2 class="section-title">지역 정보</h2>
+<p>마포 일대는 다양한 카페와 편집숍이 모여 있는 지역으로, 방문 목적에 따라 동선을 미리 계획하면 이동 시간을 줄일 수 있습니다. 강남 셔츠룸 관련 정보를 함께 찾는 방문자를 위해 인근 권역으로의 이동 경로도 함께 정리했습니다. 지역별로 운영 시간과 접근 방식이 다를 수 있으므로 방문 전 확인이 권장됩니다. 대중교통을 이용하는 경우 환승 구간이 있을 수 있어 이동 시간을 여유 있게 계산하는 것이 좋습니다.</p>
+</section>
 
-    <!-- FAQ 섹션 -->
-    <section class="section" style="background: #0f0f0f;">
-        <div class="container">
-            <h2 class="section-title">자주 묻는 헛소리</h2>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-                    <span>여기가 진짜 강남 셔츠룸 타겟 카페임?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>당연하지. 셔츠 하나만 걸치고 와도 환영한다. 분위기는 이미 씹힙. 근데 니가 셔츠룸이 뭔지 모르면 검색하고 와라.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-                    <span>주차 어디에 함?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>주차? 꿈도 꾸지 마라. 마포에서 차 끌고 오는 건 범죄다. 지하철 6호선 상수역 2번 출구에서 걸어와라. 니 다리 써라.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-                    <span>콘센트 있음? 노트북 가능?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>각 자리마다 콘센트 있다. 하지만 니가 인스타나 하려고 오면 꺼져라. 여기는 작업하는 사람들을 위한 공간이다.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-                    <span>강남에서 오려면 어떻게?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>강남 타겟이면 2호선 타고 신촌에서 내려라. 거기서 걸어와. 아니면 셔츠룸 타고 오든가. 선택은 니 몫이다.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-                    <span>전화 꼭 하고 와야 함?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>안 해도 된다. 근데 자리가 없을 수 있다. 010-6279-0862로 미리 전화해라. 게으르게 굴지 말고.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+<h2 class="section-title">이용 안내</h2>
+<div class="info-list">
+<div class="info-item"><span class="label">위치</span><span class="value">마포 일대</span></div>
+<div class="info-item"><span class="label">이용 방식</span><span class="value">사전 확인 후 방문 권장</span></div>
+<div class="info-item"><span class="label">인근 권역</span><span class="value">강남 등 이동 가능 거리</span></div>
+<div class="info-item"><span class="label">문의</span><span class="value">전화 문의 가능</span></div>
+<div class="info-item"><span class="label">참고 사항</span><span class="value">운영 시간은 시기에 따라 변경될 수 있음</span></div>
+</div>
+</section>
 
-    <!-- 추가 지역 시그널 섹션 -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">왜 마포인가?</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>마포 vs 강남</h3>
-                    <div class="meta">진짜 힙스터는 마포로 간다</div>
-                    <p>강남은 가짜다. 가로수길? 그딴 거 없음. 여기 마포는 브루탈리즘 건물 사이로 네온이 빛난다. 강남 셔츠룸 타겟이라면 마포에서 제대로 즐겨라.</p>
-                </div>
-                <div class="card">
-                    <h3>지역 맛집 연계</h3>
-                    <div class="meta">카페 끝나고 바로 고기</div>
-                    <p>카페 옆에 24시 정육점 있다. 고기 사와서 우리가 구워줌. 니가 가져오든 말든. 마포의 밤은 길다.</p>
-                </div>
-                <div class="card">
-                    <h3>교통 허브</h3>
-                    <div class="meta">어디든 30분</div>
-                    <p>홍대입구, 합정, 상수 역세권. 강남까지 25분. 너가 사는 동네가 어디든 여기로 모여라. 마포는 중심이다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="card-grid">
+<div class="card"><h3>이동 안내</h3><p>대중교통과 도보 이동 경로를 함께 고려하면 편리합니다.</p></div>
+<div class="card"><h3>주변 정보</h3><p>인근 상권과 함께 둘러볼 수 있는 지역 정보를 안내합니다.</p></div>
+<div class="card"><h3>운영 확인</h3><p>정기 휴무나 임시 변경 여부는 방문 전 확인하는 것이 좋습니다.</p></div>
+</section>
 
-    <!-- 지도 대체 안내 -->
-    <section class="section" style="background: #0a0a0a; border-top: 1px solid #ff2a6d;">
-        <div class="container">
-            <h2 class="section-title">찾아오는 법</h2>
-            <p style="text-align: center; font-size: 1.2rem;">지도 따위는 없다. 니 발로 찾아와라.</p>
-            <p style="text-align: center;">상수역 2번 출구에서 도보 3분. 골목 안쪽 지하. 네온 불빛 보이면 그게 우리다.</p>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
-            </div>
-            <p style="text-align: center; margin-top: 1rem; color: #888;">길치면 전화해라. 그런 놈들도 받아준다.</p>
-        </div>
-    </section>
+<section class="section">
+<h2 class="section-title">체크리스트</h2>
+<ul>
+<li>방문 전 운영 여부와 시간 확인</li>
+<li>주차 또는 대중교통 이동 수단 확인</li>
+<li>인근 지역(강남 등) 이동 소요 시간 확인</li>
+<li>단체 방문 시 사전 문의 필요 여부 확인</li>
+<li>문의 전화로 세부 사항 확인</li>
+<li>혼잡한 시간대를 피하고 싶다면 방문 시간대 조정</li>
+</ul>
+</section>
 
-    <!-- 푸터 유지 -->
-    <footer>
-        <div class="container">
-            <p>© 힙플레이스 마포 | 강남 셔츠룸 타겟 | 전화 010-6279-
+<section class="section">
+<h2 class="section-title">용어 정리</h2>
+<div class="info-list">
+<div class="info-item"><span class="label">힙플레이스</span><span class="value">최근 관심이 늘어난 지역 상권을 뜻하는 표현</span></div>
+<div class="info-item"><span class="label">권역</span><span class="value">인접한 지역을 함께 묶어 부르는 범위</span></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">자주 묻는 질문</h2>
+<div class="faq-item">
+<p class="faq-question">Q. 예약 없이 방문할 수 있나요?</p>
+<p class="faq-answer">A. 사전 확인 후 방문하는 것이 좋으며, 자세한 사항은 문의를 통해 안내받을 수 있습니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 마포 외 지역에서도 이용 가능한가요?</p>
+<p class="faq-answer">A. 지역 기준 안내이며, 인근 권역 이용 여부는 별도 확인이 필요합니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 주차 공간이 있나요?</p>
+<p class="faq-answer">A. 위치에 따라 다르므로 방문 전 문의를 통해 확인하는 것을 권장합니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 평일과 주말 운영 방식이 다른가요?</p>
+<p class="faq-answer">A. 시기에 따라 달라질 수 있어 방문 전 확인하는 것이 좋습니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 전화 문의는 언제 가능한가요?</p>
+<p class="faq-answer">A. 운영 시간 내 문의가 원칙이며, 정확한 시간대는 전화 연결 시 안내받을 수 있습니다.</p>
+</div>
+</section>
+
+<p>문의: <a class="tel-link" href="tel:010-6279-0862">010-6279-0862</a></p>
+</main>
+
+
 </body>
 </html>
